@@ -1,0 +1,36 @@
+[user]
+	name = Pete Wilcox
+	email = petercwilcox@gmail.com
+	signingkey = 8BD5B2750CF4435B
+[core]
+	editor = nvim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[commit]
+	gpgsign = true
+[mergetool "vimdiff"]
+	path = nvim
+[gpg]
+	program = /usr/local/bin/gpg
+[init]
+	defaultBranch = main
+[alias]
+	ri = "!sh -c 't=\"${1:-master}\"; s=\"${2:-HEAD}\"; mb=\"$(git merge-base \"$t\" \"$s\")\"; if test \"x$mb\" = x ; then o=\"$t\"; else lm=\"$(git log -n1 --merges \"$t..$s\" --pretty=%H)\"; if test \"x$lm\" = x ; then o=\"$mb\"; else o=\"$lm\"; fi; fi; test $# -gt 0 && shift; test $# -gt 0 && shift; git rebase --interactive \"$o\" \"$@\"'"
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

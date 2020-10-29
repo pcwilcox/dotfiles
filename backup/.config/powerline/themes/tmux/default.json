@@ -1,0 +1,26 @@
+{
+	"segments": {
+		"right": [
+			{
+				"function": "powerline.segments.common.vcs.branch",
+				"ignore_statuses": ["U"],
+				"status_colors": true
+			},
+			{
+				"function": "powerline.segments.common.sys.uptime",
+				"priority": 50
+			},
+			{
+				"function": "powerline.segments.common.time.date",
+				"name": "time",
+				"args": {
+					"format": "%H:%M",
+					"istime": true
+				}
+			},
+			{
+				"function": "powerline.segments.common.net.hostname"
+			}
+		]
+	}
+}

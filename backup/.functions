@@ -1,0 +1,25 @@
+# ff - see and select bash functions
+ff () {
+        echo "ff - see and select bash functions"
+        funct=$(print -l ${(ok)functions}| sed "/^_/d"| fzf --multi) 
+        declare -f $funct
+}
+
+fshow () {
+        echo "fcoc - checkout git commit"
+        git log --graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" | fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort --bind "ctrl-m:execute:
+                (grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+                {}
+FZF-EOF"
+}
+
+#falias - see and select aliases
+falias() {
+  eval $( alias | fzf --multi | sed "s/=.*//")
+}
+
+function gcnw(){
+    git diff -U0 -w --no-color "$1" | git apply --cached --ignore-whitespace --unidiff-zero -
+}
+#!/bin/bash

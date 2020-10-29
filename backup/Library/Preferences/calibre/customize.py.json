@@ -1,0 +1,21 @@
+{
+  "disabled_plugins": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "enabled_plugins": {
+    "__class__": "set",
+    "__value__": [
+      "Catalog_BIBTEX"
+    ]
+  },
+  "filetype_mapping": {},
+  "plugin_customization": {},
+  "plugins": {
+    "Audit Log": "/Users/petewilcox/Library/Preferences/calibre/plugins/Audit Log.zip",
+    "EpubMerge": "/Users/petewilcox/Library/Preferences/calibre/plugins/EpubMerge.zip",
+    "EpubSplit": "/Users/petewilcox/Library/Preferences/calibre/plugins/EpubSplit.zip",
+    "Goodreads": "/Users/petewilcox/Library/Preferences/calibre/plugins/Goodreads.zip",
+    "Kindle hi-res covers": "/Users/petewilcox/Library/Preferences/calibre/plugins/Kindle hi-res covers.zip"
+  }
+}

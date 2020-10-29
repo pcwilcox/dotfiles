@@ -1,0 +1,48 @@
+﻿<MonoDevelopProperties version="2.0">
+  <Property key="FontProperties" />
+  <Property key="Monodevelop.TaskListTokens" value="FIXME:2;TODO:1;HACK:1;UNDONE:0" />
+  <Property key="MonoDevelop.Ide.UserInterfaceTheme" value="Dark" />
+  <Property key="MonoDevelop.Ide.AddinUpdater.TestMode" value="" />
+  <Property key="SharpDevelop.Workbench.WorkbenchMemento">
+    <Property key="windowState" value="0" />
+    <Property key="fullscreen" value="False" />
+    <Property key="bounds" value="0, 22, 1680, 990" />
+  </Property>
+  <Property key="Xamarin.Live.Player.Enabled" value="False" />
+  <Property key="Monodevelop.CommentTasksColumns" value="TRUE;TRUE;TRUE;TRUE" />
+  <Property key="MonoDevelop.Ide.AddinUpdater.CheckForUpdates" value="True" />
+  <Property key="Author.Email" value="petercwilcox@gmail.com" />
+  <Property key="MonoDevelop.Core.LastRunVersion" value="7.4.3" />
+  <Property key="PackageManagementSettings" />
+  <Property key="AutoSetPatternCasing" value="False" />
+  <Property key="Monodevelop.UserTasksNormalPrioColor" value="rgb:0/0/0" />
+  <Property key="MonoDevelop.Ide.AddinUpdater.LastCheck" value="07/19/2018 07:45:30" />
+  <Property key="ColorScheme" value="Monokai" />
+  <Property key="MonoDevelop.Ide.AddinUpdater.UpdateChannel" value="Stable" />
+  <Property key="Monodevelop.UserTasksLowPrioColor" value="rgb:0/0/0" />
+  <Property key="MonoDevelop.Ide.AddinUpdater.UpdateSpanValue" value="1" />
+  <Property key="MonoDevelop.GtkCore.ShowNonContainerWarning" value="True" />
+  <Property key="AutoFormatDocumentOnSave" value="False" />
+  <Property key="MonoDevelop.Core.InstallUuid" value="c77e641e-1ea2-4bb7-9699-b49ba1005dbc" />
+  <Property key="MonoDevelop.Core.Gui.CurrentWorkbenchLayout" value="Solution" />
+  <Property key="FavoriteRecentFiles" />
+  <Property key="Monodevelop.UserTasksHighPrioColor" value="rgb:0/0/0" />
+  <Property key="MonoDevelop.Ide.ExtensibleTreeView.Zoom.MonoDevelop.UnitTesting.TestPad" value="1" />
+  <Property key="MonoDevelop.Unity.Configuration.Settings.EnableMessageCompletion" value="True" />
+  <Property key="MonoDevelop.Ide.AddinUpdater.UpdateSpanUnit" value="Day" />
+  <Property key="MonoDevelop.Unity.Configuration.Settings.PreferredAndroidSdkRoot" value="" />
+  <Property key="MonoDevelop.Core.LastRunRevision" value="5" />
+  <Property key="Author.Name" value="Pete Wilcox" />
+  <Property key="MonoDevelop.Ide.ExtensibleTreeView.Zoom.ProjectPad" value="1" />
+  <Property key="Author.Copyright" value="" />
+  <Property key="MonoDevelop.Unity.Configuration.Settings.UnityMessageScope" value="Private" />
+  <Property key="MonoDevelop.Core.FirstRun" value="False" />
+  <Property key="MonoDevelop.Ide.AddinUpdater.UpdateLevel" value="Stable" />
+  <Property key="ToolboxIsInCompactMode" value="False" />
+  <Property key="/MonoDevelop/Ide/GlobalOptionsDialog-lastPanel" value="SyntaxHighlighting" />
+  <Property key="Monodevelop.ErrorListColumns" value="TRUE;TRUE;TRUE;TRUE;TRUE;TRUE;TRUE;TRUE" />
+  <Property key="MonoDevelop.Projects.GlobalPolicyMimeTypes" value="" />
+  <Property key="MonoDevelop.TextEditor.Document.Document.DefaultDocumentAggregatorProperties" />
+  <Property key="Monodevelop.TaskList.ActiveView" value="MonoDevelop.Ide.Tasks.CommentTasksView" />
+  <Property key="ScrollBar.Mode" value="Overview" />
+</MonoDevelopProperties>
