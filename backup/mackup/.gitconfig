@@ -1,0 +1,5 @@
+[user]
+	email = petercwilcox@gmail.com
+	name = Pete Wilcox
+[core]
+	editor = nvim

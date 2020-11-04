@@ -1,14 +1,28 @@
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    if [ -r ~/.dircolors ]; then
-        eval "$(dircolors -b ~/.dircolors)"
-    else
-        eval "$(dircolors -b)"
-    fi
+if [ "$(command -v exa)" ]; then
+    alias ls='exa  --color auto --icons'
+    alias la='exa  --color auto --icons -a -s type'
+    alias ll='exa -l --color always --icons -a -s type'
 fi
+alias ..="cd .."
+alias ~="cd ~"
+if [ "$(command -v bat)" ]; then
+  alias cat='bat -pp --theme="Nord"'
+fi
+alias find="fd"
+alias gd="git diff"
+alias gdb="lldb"
+alias gl="git log"
+alias gs="git status"
+alias h="hstr"
+alias path="echo -e $PATH | tr ':' '\n'"
+alias pip="pip3"
+alias r="ranger"
+alias ssh="TERM='xterm-256color' ssh"
+alias ta="tmux attach"
+alias tat="tmux attach -t"
+alias tls="tmux ls"
 
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# matlab
-alias matlab='/Applications/MATLAB_R2019a.app/bin/matlab -nodesktop -nosplash'
+if [ -n "$(command -v nvim)" ]; then
+    alias vi="nvim"
+    alias vim="nvim"
+fi

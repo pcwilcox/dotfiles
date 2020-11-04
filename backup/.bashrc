@@ -5,14 +5,6 @@ case $- in
       *) return;;
 esac
 
-# make sure we only load things once
-if [ ${__BASHRC+x} ]; then
-    # we've already run this file
-    exit 0
-else
-    export __BASHRC=true
-fi
-
 ###
 # some colorized echo helpers
 # @author Adam Eivy
@@ -58,7 +50,6 @@ __SOURCES=(
     "$HOME/.env"
     "$HOME/.alias"
     "$HOME/.functions"
-    "$HOME/.bash-powerline.sh"
     "/usr/local/etc/profile.d/z.sh"
 )
 for f in "${__SOURCES[@]}"; do
@@ -140,3 +131,5 @@ eval
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"

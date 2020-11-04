@@ -1,7 +1,25 @@
 " .vimrc / init.vim The following vim/neovim configuration works for both Vim and NeoVim
 
+" load vim-plug if it does not exist in the dotfiles
+let s:plugpath = expand('<sfile>:p:h') . "/autoload/plug.vim"
+function! PlugLoad()
+    if !filereadable(s:plugpath)
+        if executable('curl')
+            echom "Installing vim-plug at " . s:plugpath
+            let plugurl = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+            call system('curl -fLo ' . shellescape(s:plugpath) . ' --create-dirs ' . plugurl)
+            if v:shell_error
+                echom "Error downloading vim-plug. Please install it manually.\n"
+                exit
+            endif
+        else
+            echom "vim-plug not installed. Please install it manually or install curl.\n"
+            exit
+        endif
+    endif
+endfunction
 " ensure vim-plug is installed and then load it
-call functions#PlugLoad()
+call PlugLoad()
 call plug#begin('~/.config/nvim/plugged')
 filetype plugin on
 
@@ -107,6 +125,14 @@ set tags=tags;/
 set cscopetag
 set csto=1
 set cscopeverbose
+
+
+function! Listcommits()
+    let git = 'git -C ' . getcwd()
+    let commits = systemlist(git . ' log --oneline | head -n5')
+    let git = 'G' . git[1:]
+    return map(commits, '{"line": matchstr(v:val, "\\s\\zs.*"), "cmd": "'. git .' show ". matchstr(v:val, "^\\x\\+") }')
+endfunction
 
 function! LoadCscope()
     let db = findfile("cscope.out", ".;")
@@ -516,7 +542,7 @@ Plug 'mhinz/vim-startify'
         " Custom startup list, only show MRU from current directory/project
         let g:startify_lists = [
         \  { 'type': 'dir',       'header': [ 'Files '. getcwd() ] },
-        \  { 'type': function('functions#listcommits'), 'header': [ 'Recent Commits' ] },
+        \  { 'type': function('Listcommits'), 'header': [ 'Recent Commits' ] },
         \  { 'type': 'sessions',  'header': [ 'Sessions' ]       },
         \  { 'type': 'bookmarks', 'header': [ 'Bookmarks' ]      },
         \  { 'type': 'commands',  'header': [ 'Commands' ]       },
@@ -531,7 +557,10 @@ Plug 'mhinz/vim-startify'
         let g:startify_bookmarks = [
             \ { 'c': '~/.config/nvim/init.vim' },
             \ { 'g': '~/.gitconfig' },
-            \ { 'b': '~/.bashrc' }
+            \ { 'b': '~/.bashrc' },
+            \ { 'a': '~/.alias' },
+            \ { 'f': '~/.functions' },
+            \ { 'p': '~/.path' }
         \ ]
 
         autocmd User Startified setlocal cursorline

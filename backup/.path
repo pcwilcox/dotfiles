@@ -1,13 +1,6 @@
 #!/bin/bash
 # Path additions go here and get included in .bashrc
 
-if [ ${__PATH+x} ]; then
-    # we've already run this file
-    exit 0
-else
-    export __PATH=true
-fi
-
 # Function to add to the path
 function append_path ()
 {
@@ -21,7 +14,7 @@ USER_HOME="/Users/petewilcox"
 append_path "/usr/local/opt/"
 
 # custom scripts
-append_path "${USER_HOME}/bin"
+append_path "${USER_HOME}/.bin"
 append_path "${USER_HOME}/.local/bin"
 
 # programming environments
@@ -51,14 +44,14 @@ append_path "/opt/local/sbin"
 
 # other
 append_path "/Applications/VMware Fusion.app/Contents/Public"
-#append_path "/usr/tidalscale/bin"
-#append_path "/Library/TeX/texbin"
 append_path "/usr/local/go/bin"
-#append_path "/usr/local/MacGPG2/bin"
 append_path "/usr/local/share/dotnet"
-append_path "~/.dotnet/tools"
 append_path "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 append_path "/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin"
+
+if [ "$SHELL" == "/bin/bash" ]; then
+    append_path "/usr/local/etc/bash_completion.d"
+fi
 
 append_path "$HOME/.rvm/bin"
 append_path "$HOME/.cargo/bin"

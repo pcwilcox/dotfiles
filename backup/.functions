@@ -22,4 +22,3 @@ falias() {
 function gcnw(){
     git diff -U0 -w --no-color "$1" | git apply --cached --ignore-whitespace --unidiff-zero -
 }
-#!/bin/bash

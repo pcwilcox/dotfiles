@@ -78,11 +78,12 @@ setup_shell()
 setup_os()
 {
     SYSTEM="$(uname -a)"
-    case "${SYSTEM}" in
-        #"Darwin")   setup_macos;;
+    if [[ "${SYSTEM}" =~ "Darwin" ]]; then
+	    setup_macos
+    else 
         #"Linux")    setup_linux;;
-        *)          error "Not configured for this system.";;
-    esac
+        *          error "Not configured for this system."
+    fi
 }
 #######################################################
 # SETUP MACOS (IF WE'RE ON A MAC)
@@ -113,10 +114,20 @@ setup_linux()
 }
 
 #######################################################
+# SETUP SYMLINKS
+#######################################################
+setup_symlinks()
+{
+    for f in bin/*; do
+        ln -s "$f" "$HOME/.bin/$(basename $f)"
+    done
+}
+#######################################################
 # ACTUAL EXECUTION BEGINS HERE
 #######################################################
 bot "Beginning installation of dotfiles!"
 setup_shell
 setup_os
+setup_symlinks
 
 exit 0
