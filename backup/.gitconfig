@@ -15,7 +15,7 @@
 [mergetool "vimdiff"]
 	path = nvim
 [gpg]
-	program = /usr/local/bin/gpg
+	program = gpg
 [init]
 	defaultBranch = main
 [alias]
