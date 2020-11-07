@@ -1,68 +1,9 @@
 #!/bin/bash
 
-#######################################################
-# PRELIMINARY STUFF LIKE COLORS AND FUNCTIONS
-#######################################################
-
 DOTFILES="$(pwd)"
-###
-# some colorized echo helpers
-# @author Adam Eivy
-###
 
-# Colors
-ESC_SEQ="\x1b["
-COL_RESET=$ESC_SEQ"39;49;00m"
-COL_RED=$ESC_SEQ"31;01m"
-COL_GREEN=$ESC_SEQ"32;01m"
-COL_YELLOW=$ESC_SEQ"33;01m"
-#COL_BLUE=$ESC_SEQ"34;01m"
-#COL_MAGENTA=$ESC_SEQ"35;01m"
-#COL_CYAN=$ESC_SEQ"36;01m"
+. notices
 
-ok()
-{
-    echo -e "${COL_GREEN[ok]}${COL_RESET}"
-}
-
-bot()
-{
-    echo -e "\n${COL_GREEN}\[._.]/${COL_RESET} - ${1}"
-}
-
-running()
-{
-    echo -en "${COL_YELLOW} ⇒ ${COL_RESET}${1} : "
-}
-
-action()
-{
-    echo -e "\n${COL_YELLOW}[action]:${COL_RESET}\n ⇒ ${1}..."
-}
-
-warn()
-{
-    echo -e "${COL_YELLOW}[warning]${COL_RESET} ${1}"
-}
-
-error()
-{
-    echo -e "${COL_RED}[error]${COL_RESET} ${1}"
-    exit 1
-}
-
-confirm()
-{
-    read -r -p "${1:-${COL_RED}Are you sure? [y/N]${COL_RESET}} " response
-    case "$response" in
-        [yY][eE][sS]|[yY])
-            true
-            ;;
-        *)
-            false
-            ;;
-    esac
-}
 
 #######################################################
 # SETUP SHELL
@@ -80,8 +21,9 @@ setup_os()
     SYSTEM="$(uname -a)"
     if [[ "${SYSTEM}" =~ "Darwin" ]]; then
 	    setup_macos
-    else 
-        #"Linux")    setup_linux;;
+	elif [[ "${SYSTEM}" =~ "Linux" ]]; then
+	    setup_linux
+    else
         *          error "Not configured for this system."
     fi
 }
@@ -110,7 +52,16 @@ setup_macos()
 #######################################################
 setup_linux()
 {
-    error "Not configured for linux yet :("
+	# install things from apt
+	apt_install.sh
+
+	# install things which aren't in apt
+	not_apt_install.sh
+
+	# symlink things
+	for f in $(pwd)/symlinks/*; do
+		ln -s $f ~/"$(basename $f)"
+	done
 }
 
 #######################################################

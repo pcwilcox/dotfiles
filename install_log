@@ -1,0 +1,440 @@
+~/git/ctags ~/.dotfiles
+Already up to date.
+~/git/ctags ~/git/ctags ~/.dotfiles
++ type autoreconf
++ type pkg-config
++ [ -z  ]
++ type make
++ MAKE=make
++ make -s -f makefiles/list-optlib2c-input.mak
++ ctags_files=optlib/RSpec.ctags
+optlib/cmake.ctags
+optlib/ctags-optlib.ctags
+optlib/elixir.ctags
+optlib/elm.ctags
+optlib/gdbinit.ctags
+optlib/inko.ctags
+optlib/kconfig.ctags
+optlib/man.ctags
+optlib/markdown.ctags
+optlib/passwd.ctags
+optlib/pod.ctags
+optlib/qemuhx.ctags
+optlib/puppetManifest.ctags
+optlib/scss.ctags
+optlib/systemtap.ctags
++ autoreconf -vfi
+autoreconf: Entering directory `.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force 
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+/usr/share/automake-1.16/am/tags.am: warning: redefinition of 'ctags' ...
+/usr/share/automake-1.16/am/program.am: ... 'ctags$(EXEEXT)' previously defined here
+Makefile.am:35:   while processing program 'ctags'
+autoreconf: Leaving directory `.'
++ type perl
++ o=optlib/RSpec.c
++ echo optlib2c: translating optlib/RSpec.ctags to optlib/RSpec.c
+optlib2c: translating optlib/RSpec.ctags to optlib/RSpec.c
++ ./misc/optlib2c optlib/RSpec.ctags
++ o=optlib/cmake.c
++ echo optlib2c: translating optlib/cmake.ctags to optlib/cmake.c
+optlib2c: translating optlib/cmake.ctags to optlib/cmake.c
++ ./misc/optlib2c optlib/cmake.ctags
++ o=optlib/ctags-optlib.c
++ echo optlib2c: translating optlib/ctags-optlib.ctags to optlib/ctags-optlib.c
+optlib2c: translating optlib/ctags-optlib.ctags to optlib/ctags-optlib.c
++ ./misc/optlib2c optlib/ctags-optlib.ctags
++ o=optlib/elixir.c
++ echo optlib2c: translating optlib/elixir.ctags to optlib/elixir.c
+optlib2c: translating optlib/elixir.ctags to optlib/elixir.c
++ ./misc/optlib2c optlib/elixir.ctags
++ o=optlib/elm.c
++ echo optlib2c: translating optlib/elm.ctags to optlib/elm.c
+optlib2c: translating optlib/elm.ctags to optlib/elm.c
++ ./misc/optlib2c optlib/elm.ctags
++ o=optlib/gdbinit.c
++ echo optlib2c: translating optlib/gdbinit.ctags to optlib/gdbinit.c
+optlib2c: translating optlib/gdbinit.ctags to optlib/gdbinit.c
++ ./misc/optlib2c optlib/gdbinit.ctags
++ o=optlib/inko.c
++ echo optlib2c: translating optlib/inko.ctags to optlib/inko.c
+optlib2c: translating optlib/inko.ctags to optlib/inko.c
++ ./misc/optlib2c optlib/inko.ctags
++ o=optlib/kconfig.c
++ echo optlib2c: translating optlib/kconfig.ctags to optlib/kconfig.c
+optlib2c: translating optlib/kconfig.ctags to optlib/kconfig.c
++ ./misc/optlib2c optlib/kconfig.ctags
++ o=optlib/man.c
++ echo optlib2c: translating optlib/man.ctags to optlib/man.c
+optlib2c: translating optlib/man.ctags to optlib/man.c
++ ./misc/optlib2c optlib/man.ctags
++ o=optlib/markdown.c
++ echo optlib2c: translating optlib/markdown.ctags to optlib/markdown.c
+optlib2c: translating optlib/markdown.ctags to optlib/markdown.c
++ ./misc/optlib2c optlib/markdown.ctags
++ o=optlib/passwd.c
++ echo optlib2c: translating optlib/passwd.ctags to optlib/passwd.c
+optlib2c: translating optlib/passwd.ctags to optlib/passwd.c
++ ./misc/optlib2c optlib/passwd.ctags
++ o=optlib/pod.c
++ echo optlib2c: translating optlib/pod.ctags to optlib/pod.c
+optlib2c: translating optlib/pod.ctags to optlib/pod.c
++ ./misc/optlib2c optlib/pod.ctags
++ o=optlib/qemuhx.c
++ echo optlib2c: translating optlib/qemuhx.ctags to optlib/qemuhx.c
+optlib2c: translating optlib/qemuhx.ctags to optlib/qemuhx.c
++ ./misc/optlib2c optlib/qemuhx.ctags
++ o=optlib/puppetManifest.c
++ echo optlib2c: translating optlib/puppetManifest.ctags to optlib/puppetManifest.c
+optlib2c: translating optlib/puppetManifest.ctags to optlib/puppetManifest.c
++ ./misc/optlib2c optlib/puppetManifest.ctags
++ o=optlib/scss.c
++ echo optlib2c: translating optlib/scss.ctags to optlib/scss.c
+optlib2c: translating optlib/scss.ctags to optlib/scss.c
++ ./misc/optlib2c optlib/scss.ctags
++ o=optlib/systemtap.c
++ echo optlib2c: translating optlib/systemtap.ctags to optlib/systemtap.c
+optlib2c: translating optlib/systemtap.ctags to optlib/systemtap.c
++ ./misc/optlib2c optlib/systemtap.ctags
++ exit 0
+Universal Ctags, version 5.9.0
+Linux 4.4.0-18362-Microsoft #1049-Microsoft Thu Aug 14 12:01:00 PST 2020 x86_64
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking for gcc option to accept ISO C99... none needed
+checking for ranlib... ranlib
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking whether ln -s works... yes
+checking for strip... strip
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for perl... no
+checking for rst2man... /usr/bin/rst2man
+checking whether rst2mn has --syntax-highlight option... yes
+checking building in a git repository... yes
+checking for git... git
+checking for timeout... timeout
+checking for python3... python3
+checking directory to use for temporary files... /tmp
+checking for case-insensitive filenames... no
+checking selected sort method... external sort utility
+checking for sort... yes
+checking if sort accepts our command line... yes
+checking direct.h usability... no
+checking direct.h presence... no
+checking for direct.h... no
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking io.h usability... no
+checking io.h presence... no
+checking for io.h... no
+checking stat.h usability... no
+checking stat.h presence... no
+checking for stat.h... no
+checking types.h usability... no
+checking types.h presence... no
+checking for types.h... no
+checking for unistd.h... (cached) yes
+checking sys/dir.h usability... yes
+checking sys/dir.h presence... yes
+checking for sys/dir.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking if L_tmpnam is defined in stdio.h... yes
+checking for off_t... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking for an ANSI C-conforming const... yes
+checking for typeof syntax and keyword spelling... typeof
+checking if compiler supports statement expressions... yes
+checking if struct stat contains st_ino... yes
+checking for fnmatch... yes
+checking fnmatch.h usability... yes
+checking fnmatch.h presence... yes
+checking for fnmatch.h... yes
+checking for asprintf... yes
+checking for strstr... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking for mkstemp... yes
+checking for opendir... yes
+checking for strerror... yes
+checking for truncate... yes
+checking for setenv... yes
+checking for regcomp... yes
+checking if regcomp works... yes
+checking for scandir... yes
+checking for dirent.h... (cached) yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for LIBXML... yes
+checking for JANSSON... yes
+checking for SECCOMP... yes
+checking for LIBYAML... yes
+configure: checking for new missing prototypes
+checking for iconv_open or libiconv_open with -liconv... no
+checking for iconv_open... yes
+checking whether __environ is declared... yes
+checking whether _NSGetEnviron is declared... no
+checking whether strnlen is declared... yes
+checking for mblen... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating man/ctags.1.rst
+config.status: creating man/ctags-client-tools.7.rst
+config.status: creating man/ctags-incompatibilities.7.rst
+config.status: creating man/ctags-optlib.7.rst
+config.status: creating man/ctags-lang-python.7.rst
+config.status: creating man/ctags-lang-verilog.7.rst
+config.status: creating man/readtags.1.rst
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+REPOINFO   main/repoinfo.h
+make  all-am
+make[1]: Entering directory '/home/pete/git/ctags'
+REPOINFO   main/repoinfo.h
+OPTLIB2C   optlib/RSpec.c
+  CC       optlib/libctags_a-RSpec.o
+OPTLIB2C   optlib/cmake.c
+  CC       optlib/libctags_a-cmake.o
+OPTLIB2C   optlib/ctags-optlib.c
+  CC       optlib/libctags_a-ctags-optlib.o
+OPTLIB2C   optlib/elixir.c
+  CC       optlib/libctags_a-elixir.o
+OPTLIB2C   optlib/elm.c
+  CC       optlib/libctags_a-elm.o
+OPTLIB2C   optlib/gdbinit.c
+  CC       optlib/libctags_a-gdbinit.o
+OPTLIB2C   optlib/inko.c
+  CC       optlib/libctags_a-inko.o
+OPTLIB2C   optlib/kconfig.c
+  CC       optlib/libctags_a-kconfig.o
+OPTLIB2C   optlib/man.c
+  CC       optlib/libctags_a-man.o
+OPTLIB2C   optlib/markdown.c
+  CC       optlib/libctags_a-markdown.o
+OPTLIB2C   optlib/passwd.c
+  CC       optlib/libctags_a-passwd.o
+OPTLIB2C   optlib/pod.c
+  CC       optlib/libctags_a-pod.o
+OPTLIB2C   optlib/qemuhx.c
+  CC       optlib/libctags_a-qemuhx.o
+OPTLIB2C   optlib/puppetManifest.c
+  CC       optlib/libctags_a-puppetManifest.o
+OPTLIB2C   optlib/scss.c
+  CC       optlib/libctags_a-scss.o
+OPTLIB2C   optlib/systemtap.c
+  CC       optlib/libctags_a-systemtap.o
+PACKCC     peg/varlink.c
+  CC       peg/libctags_a-varlink.o
+  AR       libctags.a
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CCLD     ctags
+  CCLD     mini-geany
+RST2MAN    man/ctags.1
+RST2MAN    man/readtags.1
+RST2MAN    man/ctags-client-tools.7
+RST2MAN    man/ctags-incompatibilities.7
+RST2MAN    man/ctags-optlib.7
+RST2MAN    man/ctags-lang-python.7
+RST2MAN    man/ctags-lang-verilog.7
+make[1]: Leaving directory '/home/pete/git/ctags'
+REPOINFO   main/repoinfo.h
+make  install-am
+make[1]: Entering directory '/home/pete/git/ctags'
+REPOINFO   main/repoinfo.h
+  CCLD     ctags
+make[2]: Entering directory '/home/pete/git/ctags'
+REPOINFO   main/repoinfo.h
+  CCLD     ctags
+ /usr/bin/mkdir -p '/usr/local/bin'
+  /usr/bin/install -c ctags readtags '/usr/local/bin'
+make  install-exec-hook
+make[3]: Entering directory '/home/pete/git/ctags'
+make[3]: Nothing to be done for 'install-exec-hook'.
+make[3]: Leaving directory '/home/pete/git/ctags'
+ /usr/bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 man/ctags.1 man/readtags.1 '/usr/local/share/man/man1'
+ /usr/bin/mkdir -p '/usr/local/share/man/man5'
+ /usr/bin/install -c -m 644 man/tags.5 '/usr/local/share/man/man5'
+ /usr/bin/mkdir -p '/usr/local/share/man/man7'
+ /usr/bin/install -c -m 644 man/ctags-client-tools.7 man/ctags-incompatibilities.7 man/ctags-optlib.7 man/ctags-lang-python.7 man/ctags-lang-verilog.7 '/usr/local/share/man/man7'
+make[2]: Leaving directory '/home/pete/git/ctags'
+make[1]: Leaving directory '/home/pete/git/ctags'
+~/git/ctags ~/.dotfiles
+~/git/has ~/git/ctags ~/.dotfiles
+Already up to date.
+~/git/has ~/git/has ~/git/ctags ~/.dotfiles
+chmod 755 has && \
+mkdir -v -p /usr/local/bin && \
+cp -v has /usr/local/bin/has
+'has' -> '/usr/local/bin/has'
+~/git/has ~/git/ctags ~/.dotfiles
+~/git/bats-core ~/git/has ~/git/ctags ~/.dotfiles
+Already up to date.
+~/git/bats-core ~/git/bats-core ~/git/has ~/git/ctags ~/.dotfiles
+Installed Bats to /home/pete/bin/bats
+~/git/bats-core ~/git/has ~/git/ctags ~/.dotfiles
+~/git/diff-so-fancy ~/git/bats-core ~/git/has ~/git/ctags ~/.dotfiles
+Already up to date.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  100k  100  100k    0     0   340k      0 --:--:-- --:--:-- --:--:--  340k
+~/git ~/git/diff-so-fancy ~/git/bats-core ~/git/has ~/git/ctags ~/.dotfiles
+~/git/exercism ~/git ~/git/diff-so-fancy ~/git/bats-core ~/git/has ~/git/ctags ~/.dotfiles
+--2020-11-05 01:30:13--  https://github.com/exercism/cli/releases/download/v3.0.13/exercism-3.0.13-linux-x86_64.tar.gz
+Resolving github.com (github.com)... 192.30.255.113
+Connecting to github.com (github.com)|192.30.255.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-production-release-asset-2e65be.s3.amazonaws.com/11870975/f62f1300-f644-11e9-896f-1be941ecd2bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201105T092805Z&X-Amz-Expires=300&X-Amz-Signature=3cb93bcb8a207f9da47d91252620aeb3b7abfacb540ab7a68eeee0844c5b4d9d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=11870975&response-content-disposition=attachment%3B%20filename%3Dexercism-3.0.13-linux-x86_64.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2020-11-05 01:30:13--  https://github-production-release-asset-2e65be.s3.amazonaws.com/11870975/f62f1300-f644-11e9-896f-1be941ecd2bf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201105%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201105T092805Z&X-Amz-Expires=300&X-Amz-Signature=3cb93bcb8a207f9da47d91252620aeb3b7abfacb540ab7a68eeee0844c5b4d9d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=11870975&response-content-disposition=attachment%3B%20filename%3Dexercism-3.0.13-linux-x86_64.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)... 52.217.76.68
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)|52.217.76.68|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4248092 (4.1M) [application/octet-stream]
+Saving to: ‘exercism-3.0.13-linux-x86_64.tar.gz.2’
+
+     0K .......... .......... .......... .......... ..........  1%  477K 9s
+    50K .......... .......... .......... .......... ..........  2%  523K 8s
+   100K .......... .......... .......... .......... ..........  3% 1.86M 6s
+   150K .......... .......... .......... .......... ..........  4%  865K 6s
+   200K .......... .......... .......... .......... ..........  6% 2.57M 5s
+   250K .......... .......... .......... .......... ..........  7%  868K 5s
+   300K .......... .......... .......... .......... ..........  8% 1.48M 4s
+   350K .......... .......... .......... .......... ..........  9% 24.1M 4s
+   400K .......... .......... .......... .......... .......... 10%  942K 4s
+   450K .......... .......... .......... .......... .......... 12% 5.97M 3s
+   500K .......... .......... .......... .......... .......... 13% 10.6M 3s
+   550K .......... .......... .......... .......... .......... 14% 4.55M 3s
+   600K .......... .......... .......... .......... .......... 15% 1.94M 3s
+   650K .......... .......... .......... .......... .......... 16% 6.59M 2s
+   700K .......... .......... .......... .......... .......... 18% 1.77M 2s
+   750K .......... .......... .......... .......... .......... 19% 3.37M 2s
+   800K .......... .......... .......... .......... .......... 20% 22.4M 2s
+   850K .......... .......... .......... .......... .......... 21% 8.67M 2s
+   900K .......... .......... .......... .......... .......... 22% 8.44M 2s
+   950K .......... .......... .......... .......... .......... 24% 17.2M 2s
+  1000K .......... .......... .......... .......... .......... 25% 4.23M 2s
+  1050K .......... .......... .......... .......... .......... 26% 6.26M 2s
+  1100K .......... .......... .......... .......... .......... 27% 7.05M 2s
+  1150K .......... .......... .......... .......... .......... 28% 6.59M 1s
+  1200K .......... .......... .......... .......... .......... 30% 3.99M 1s
+  1250K .......... .......... .......... .......... .......... 31% 14.1M 1s
+  1300K .......... .......... .......... .......... .......... 32% 2.34M 1s
+  1350K .......... .......... .......... .......... .......... 33% 5.85M 1s
+  1400K .......... .......... .......... .......... .......... 34% 1.14M 1s
+  1450K .......... .......... .......... .......... .......... 36% 5.88M 1s
+  1500K .......... .......... .......... .......... .......... 37% 2.64M 1s
+  1550K .......... .......... .......... .......... .......... 38% 15.5M 1s
+  1600K .......... .......... .......... .......... .......... 39% 8.40M 1s
+  1650K .......... .......... .......... .......... .......... 40% 2.05M 1s
+  1700K .......... .......... .......... .......... .......... 42% 11.6M 1s
+  1750K .......... .......... .......... .......... .......... 43% 4.76M 1s
+  1800K .......... .......... .......... .......... .......... 44% 7.80M 1s
+  1850K .......... .......... .......... .......... .......... 45% 6.05M 1s
+  1900K .......... .......... .......... .......... .......... 47% 7.37M 1s
+  1950K .......... .......... .......... .......... .......... 48% 6.29M 1s
+  2000K .......... .......... .......... .......... .......... 49% 6.91M 1s
+  2050K .......... .......... .......... .......... .......... 50% 12.3M 1s
+  2100K .......... .......... .......... .......... .......... 51% 4.18M 1s
+  2150K .......... .......... .......... .......... .......... 53% 10.4M 1s
+  2200K .......... .......... .......... .......... .......... 54%  228K 1s
+  2250K .......... .......... .......... .......... .......... 55% 9.07M 1s
+  2300K .......... .......... .......... .......... .......... 56% 6.43M 1s
+  2350K .......... .......... .......... .......... .......... 57% 8.09M 1s
+  2400K .......... .......... .......... .......... .......... 59% 4.59M 1s
+  2450K .......... .......... .......... .......... .......... 60% 22.0M 1s
+  2500K .......... .......... .......... .......... .......... 61% 2.39M 1s
+  2550K .......... .......... .......... .......... .......... 62% 8.60M 1s
+  2600K .......... .......... .......... .......... .......... 63% 15.9M 1s
+  2650K .......... .......... .......... .......... .......... 65% 28.9M 1s
+  2700K .......... .......... .......... .......... .......... 66% 15.1M 1s
+  2750K .......... .......... .......... .......... .......... 67% 3.25M 1s
+  2800K .......... .......... .......... .......... .......... 68% 4.16M 1s
+  2850K .......... .......... .......... .......... .......... 69% 11.7M 0s
+  2900K .......... .......... .......... .......... .......... 71% 5.61M 0s
+  2950K .......... .......... .......... .......... .......... 72% 4.88M 0s
+  3000K .......... .......... .......... .......... .......... 73% 4.61M 0s
+  3050K .......... .......... .......... .......... .......... 74% 10.1M 0s
+  3100K .......... .......... .......... .......... .......... 75% 12.7M 0s
+  3150K .......... .......... .......... .......... .......... 77% 3.38M 0s
+  3200K .......... .......... .......... .......... .......... 78% 9.62M 0s
+  3250K .......... .......... .......... .......... .......... 79% 8.09M 0s
+  3300K .......... .......... .......... .......... .......... 80% 15.3M 0s
+  3350K .......... .......... .......... .......... .......... 81% 18.9M 0s
+  3400K .......... .......... .......... .......... .......... 83% 6.61M 0s
+  3450K .......... .......... .......... .......... .......... 84% 13.7M 0s
+  3500K .......... .......... .......... .......... .......... 85% 13.2M 0s
+  3550K .......... .......... .......... .......... .......... 86% 9.06M 0s
+  3600K .......... .......... .......... .......... .......... 87% 6.11M 0s
+  3650K .......... .......... .......... .......... .......... 89% 24.8M 0s
+  3700K .......... .......... .......... .......... .......... 90% 22.0M 0s
+  3750K .......... .......... .......... .......... .......... 91% 11.1M 0s
+  3800K .......... .......... .......... .......... .......... 92% 7.38M 0s
+  3850K .......... .......... .......... .......... .......... 94% 21.5M 0s
+  3900K .......... .......... .......... .......... .......... 95% 6.84M 0s
+  3950K .......... .......... .......... .......... .......... 96% 22.1M 0s
+  4000K .......... .......... .......... .......... .......... 97% 10.9M 0s
+  4050K .......... .......... .......... .......... .......... 98% 31.6M 0s
+  4100K .......... .......... .......... .......... ........  100% 25.9M=1.3s
+
+2020-11-05 01:30:15 (3.21 MB/s) - ‘exercism-3.0.13-linux-x86_64.tar.gz.2’ saved [4248092/4248092]
+
+LICENSE
+README.md
+shell/README.md
+shell/exercism.fish
+shell/exercism_completion.bash
+shell/exercism_completion.zsh
+exercism
+sh: 0: Illegal option -y
