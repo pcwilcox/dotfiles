@@ -1,145 +1,34 @@
 {
-    "go.inferGopath": true,
-    "editor.renderWhitespace": "boundary",
-    "editor.dragAndDrop": false,
+    "search.followSymlinks": false,
     "editor.formatOnSave": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.codeLens.scopes": [
-        "document"
-    ],
-    "indentRainbow.colors": [
-        "rgba(16,16,16,0.1)",
-        "rgba(16,16,16,0.2)",
-        "rgba(16,16,16,0.3)",
-        "rgba(16,16,16,0.4)",
-        "rgba(16,16,16,0.5)",
-        "rgba(16,16,16,0.6)",
-        "rgba(16,16,16,0.7)",
-        "rgba(16,16,16,0.8)",
-        "rgba(16,16,16,0.9)",
-        "rgba(16,16,16,1.0)"
-    ],
-    "C_Cpp.clang_format_fallbackStyle": "LLVM",
-    "C_Cpp.clang_format_path": "/usr/local/bin/clang-format",
-    "latex-workshop.message.update.show": false,
-    "window.zoomLevel": 0,
-    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
-    "shellcheck.run": "onSave",
-    "workbench.colorTheme": "Monokai",
-    "editor.fontFamily": "Fira Code",
-    "editor.tabCompletion": "on",
-    "editor.wordBasedSuggestions": false,
-    "editor.wordWrapColumn": 1000,
-    "explorer.confirmDragAndDrop": false,
-    "editor.detectIndentation": false,
-    "latex-workshop.latex.autoClean.run": "onFailed",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "bracketPairColorizer.forceIterationColorCycle": true,
-    "bracketPairColorizer.forceUniqueOpeningColor": true,
-    "editor.fontLigatures": true,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
-    "sync.gist": "16995eee3ba343c00fc5545d7f2c3ced",
-    "githubPullRequests.defaultMergeMethod": "squash",
-    "latex-workshop.chktex.enabled": true,
-    "latex-preview.command": "xelatex",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "peacock.favoriteColors": [
+    "clang-format.executable": "/usr/bin/clang-format",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.editorAssociations": [
         {
-            "name": "Angular Red",
-            "value": "#b52e31"
-        },
-        {
-            "name": "Auth0 Orange",
-            "value": "#eb5424"
-        },
-        {
-            "name": "Azure Blue",
-            "value": "#007fff"
-        },
-        {
-            "name": "C# Purple",
-            "value": "#68217A"
-        },
-        {
-            "name": "Gatsby Purple",
-            "value": "#639"
-        },
-        {
-            "name": "Go Cyan",
-            "value": "#5dc9e2"
-        },
-        {
-            "name": "Java Blue-Gray",
-            "value": "#557c9b"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#00b3e6"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        },
-        {
-            "name": "Just Black",
-            "value": "#000000"
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
         }
     ],
-    "peacock.affectActivityBar": true,
-    "peacock.affectStatusBar": true,
-    "peacock.surpriseMeOnStartup": true,
-    "uncrustify.configPath.osx": "/usr/src/tools/tidalscale/uncrustify/tidalscale.cfg",
-    "C_Cpp.formatting": "Disabled",
-    "C_Cpp.default.includePath": [
-        "/usr/src/**",
-    ],
-    "C_Cpp.commentContinuationPatterns": [
-        "//",
-        "/*"
-    ],
-    "latex-workshop.latex.autoBuild.run": "never",
-    "files.associations": {
-        "*.tex": "latex"
+    "remote.SSH.remotePlatform": {
+        "ds9": "linux",
+        "ds9.local": "linux",
+        "gateway.soe.ucsc.edu": "linux",
+        "bohr5.soe.ucsc.edu": "linux"
     },
-    "[latex]": {
-        "editor.formatOnSave": false,
-        "editor.wordWrapColumn": 80
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.configFile": "C:\\Users\\peter\\.ssh\\config",
+    "workbench.iconTheme": "vscode-icons",
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
     },
-    "rewrap.autoWrap.enabled": true,
-    "print.colourScheme": "atom-one-light",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "print.lineNumbers": "off",
-    "C_Cpp.default.cStandard": "c99",
-    "C_Cpp.default.intelliSenseMode": "clang-x64",
-    "terminal.external.osxExec": "iTerm.app",
-    "C_Cpp.intelliSenseEngineFallback": "Enabled",
-    "vim.leader": ",",
-    "vim.useSystemClipboard": true,
-    "editor.wordWrap": "bounded",
+    "editor.lineNumbers": "relative",
+    "editor.fontLigatures": true,
+    "editor.autoSurround": "never",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "verilog-formatter.istyle.path": "pengwin run /home/pete/git/istyle-verilog-formatter/bin/release/iStyle",
+    "verilog-formatter.istyle.style": "GNU",
+    "verilog.linting.linter": "xvlog",
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "window.zoomLevel": 0
 }

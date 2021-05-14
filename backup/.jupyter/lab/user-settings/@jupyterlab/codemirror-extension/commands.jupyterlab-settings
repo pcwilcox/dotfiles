@@ -4,7 +4,16 @@
     // Text editor settings for all CodeMirror editors.
     // ************************************************
 
+    // [missing schema title]
+    // [missing schema description]
+    "font-family": "default",
+
     // Key Map
     // Configures the keymap to use
-    "keyMap": "vim"
+    "keyMap": "vim",
+
+    // Theme
+    // CSS file defining the corresponding
+    // .cm-s-[name] styles is loaded
+    "theme": "jupyter"
 }

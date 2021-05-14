@@ -1,7 +1,7 @@
 [user]
 	name = Pete Wilcox
-	email = petercwilcox@gmail.com
-	signingkey = 8BD5B2750CF4435B
+	email = pete@pcwilcox.com
+	signingkey = 56A9F0F66C0DDEF5
 [core]
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=4 -RFX
@@ -34,3 +34,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[diff-so-fancy]
+	markEmptyLines = false
+	changeHunkIndicators = false
+	stripLeadingSymbols = false

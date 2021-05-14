@@ -2,31 +2,43 @@
 # Path additions go here and get included in .bashrc
 
 # Function to add to the path
-function append_path ()
+append_path ()
 {
-    export PATH="$PATH:${1}"
+    if [ -z "${PATH}" ]; then
+        export PATH="${1}"
+    else
+        export PATH="$PATH:${1}"
+    fi
 }
 
-export PATH=""
-USER_HOME="/Users/petewilcox"
+prepend_path() {
+    if [ -z "${PATH}" ]; then
+        export PATH="${1}"
+    else
+        export PATH="${1}:$PATH"
+    fi
+}
+
+unset PATH
 
 # homebrew things go first
 append_path "/usr/local/opt/"
+append_path "/usr/local/sbin"
 
 # custom scripts
-append_path "${USER_HOME}/.bin"
-append_path "${USER_HOME}/.local/bin"
+append_path "${HOME}/.bin"
+append_path "${HOME}/.local/bin"
 
 # programming environments
-append_path "${USER_HOME}/anaconda3"
-append_path "${USER_HOME}/Library/Haskell/bin"
-append_path "${USER_HOME}/go/bin"
-#append_path "${USER_HOME}/Library/Python/2.7/bin"
-append_path "${USER_HOME}/Library/Python/3.7/bin"
-append_path "${USER_HOME}/.cargo/bin"
-append_path "${USER_HOME}/.rvm/gems/ruby-2.1.10/bin"
-append_path "${USER_HOME}/.rvm/gems/ruby-2.1.10@global/bin"
-append_path "${USER_HOME}/.rvm/rubies/ruby-2.1.10/bin"
+append_path "${HOME}/anaconda3"
+append_path "${HOME}/Library/Haskell/bin"
+append_path "${HOME}/go/bin"
+append_path "${HOME}/.cargo/bin"
+append_path "${HOME}/.rvm/gems/ruby-2.1.10/bin"
+append_path "${HOME}/.rvm/gems/ruby-2.1.10@global/bin"
+append_path "${HOME}/.rvm/rubies/ruby-2.1.10/bin"
+prepend_path "${HOME}/.gem/bin"
+append_path "${HOME}/.rvm/bin"
 
 # builtins
 append_path "/usr/local/bin"
@@ -36,7 +48,7 @@ append_path "/usr/sbin"
 append_path "/sbin"
 
 # GNU utilities from homebrew
-append_path "$(brew --prefix coreutils)/libexec/gnubin"
+append_path "/usr/local/opt/coreutils/libexec/gnubin"
 
 # macports
 append_path "/opt/local/bin"
@@ -56,8 +68,8 @@ fi
 append_path "$HOME/.rvm/bin"
 append_path "$HOME/.cargo/bin"
 
+export PATH
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
 export GOBIN=$HOME/go/bin
 export GOPATH=$HOME/go
-

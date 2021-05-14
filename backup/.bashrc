@@ -133,3 +133,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+source <(cod init $$ bash)
+
+export GPG_TTY=/dev/ttys006
+eval "$(/usr/libexec/path_helper)"

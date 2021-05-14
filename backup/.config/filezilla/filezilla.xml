@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<FileZilla3 version="3.50.0" platform="mac">
+<FileZilla3 version="3.51.0" platform="mac">
 	<Settings>
 		<Setting name="Use Pasv mode">1</Setting>
 		<Setting name="Limit local ports">0</Setting>
@@ -60,69 +60,6 @@
 		<Setting name="Concurrent upload limit">0</Setting>
 		<Setting name="Update Check">1</Setting>
 		<Setting name="Update Check Interval">7</Setting>
-		<Setting name="Last automatic update check">2020-09-22 17:49:10</Setting>
-		<Setting name="Last automatic update version">3.47.1</Setting>
-		<Setting name="Update Check New Version">nightly 2020-09-21 https://filezilla-project.org/nightlies/2020-09-21/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 12774524 sha512 e293fa855d97c48a449f9ae0a326540b93c52330ca460637558b92b46bde4dde04cb06987d69517ef1705ccac7336553317dff52aec98db7316e18280810e6af sig:PCD1WVOJhxeOLTJynU1X10hTynpeR5oEuQpfL3jwH47wXHhj8mNEOk37GxySUeovzjjdls3U0dVta8pLxc6rDg
-release 3.50.0 https://dl4.cdn.filezilla-project.org/FileZilla_3.50.0_macosx-x86.app.tar.bz2 13844514 sha512 ad182bc7e6a61d9178c847ad3cb9d92145209591c25cec9c20c1b3a948b6c24bbfc04c62db38ec6226eeafc9997b7465225c82a82aa7f15aa5169eb5cb45e25c sig:+HxuJESFAMkzTQbcd777oKX7JOKshwIryszneVsGR0yPaIqO2YGknJr5pN7asTzWuJdIJYvZw35DPdsbV8jhBA
-
-3.50.0 (2020-08-27)
-
-- Minor fixes to Tardigrade integration
-
-3.50.0-rc1 (2020-08-21)
-
-+ Update Storj/Tardigrade integration, now based on the uplink-c library
-- Fix layout issues in the Site Manager if switching protocol
-- Restored natural sort option for file list sorting
-
-3.49.1 (2020-07-15)
-
-- Fixed selection changes not being reflected in the Site Manager in some circumstances
-
-3.49.0 (2020-07-14)
-
-- Fixed retrying initial connection attempts
-
-3.49.0-rc1 (2020-07-07)
-
-- MSW: Tab bar icons now scale on high-DPI displays
-- The sizing and spacing of several dialogs has been improved on high-DPI displays
-- MSW: Fix visual glitches when changing the selected site in the Site Manager
-- When creating a new tab, the pane sizes are now inherited from the previous tab.
-- macOS: Additional fixes for handling Cmd+V, Cmd+C and Cmd+X in text input controls
-- Refactored internal settings and option handling
-
-3.48.1 (2020-05-19)
-
-- If FileZilla is configured to restore open tabs on startup, the directory trees no longer shrink in size
-
-3.48.1-rc1 (2020-05-12)
-
-! MSW: The settings directory is now initially created with tight permissions restricted to the user's account. Previously the directory could have had inherited too wide permissions if a custom location outside the user's profile directory had been preconfigured.
-+ Redesigned certificate dialog
-+ During directory comparison and comparative search, Ctrl+Shift+A can now be used to select only the highlighted files
-- Fixed import of settings
-- Fixed local file editing if the option to track local file changes had been disabled
-- Fixes to storing associations
-
-3.48.0 (2020-04-28)
-
-! Custom associations for file extensions containing spaces were not saved correctly
-
-3.48.0-rc1 (2020-04-20)
-
-+ Overhaul of file associations for editing files. The setting to inherit system associations has been removed. When first editing a type of file with no default editor set, a dialog is shown asking which editor to use. The system associatio, if it exists, is a choice in this dialog.
-- SFTP: Re-added support for AES-GCM which was accidentally removed in 3.46.1
-- Fixes for comparative search leaving the program in an inconsistent state when closing the dialog during an ongoing search
-- Building and running FileZilla now depends on libfilezilla &gt;= 0.20.0 (https://lib.filezilla-project.org/)
-
-3.47.2.1 (2020-03-11)
-
-- macOS: Potential fix for clipped text labels on a few systems
-- SFTP: Backported selected fixes from developement versions of PuTTY
-- Fixed value range for directional transfer limits
-- Fixed layout issues if changing to/from comparative search
-</Setting>
 		<Setting name="Update Check Check Beta">0</Setting>
 		<Setting name="Show debug menu">0</Setting>
 		<Setting name="File exists action download">0</Setting>
@@ -153,7 +90,6 @@ release 3.50.0 https://dl4.cdn.filezilla-project.org/FileZilla_3.50.0_macosx-x86
 		<Setting name="Custom file associations" />
 		<Setting name="Comparison mode">1</Setting>
 		<Setting name="Comparison threshold">1</Setting>
-		<Setting name="Site Manager position">0 487 278 706 494 </Setting>
 		<Setting name="Icon theme">default</Setting>
 		<Setting name="Icon scale">125</Setting>
 		<Setting name="Timestamp in message log">0</Setting>
@@ -200,7 +136,56 @@ release 3.50.0 https://dl4.cdn.filezilla-project.org/FileZilla_3.50.0_macosx-x86
 		<Setting name="File associations (v2)" platform="mac" />
 		<Setting name="Window position and size">0 2074 252 1200 910 </Setting>
 		<Setting name="Highest shown overlay id">0</Setting>
-		<Setting name="Greeting version">3.50.0</Setting>
+		<Setting name="Greeting version">3.51.0</Setting>
+		<Setting name="Site Manager position">0 2178 486 992 494 </Setting>
+		<Setting name="Last automatic update check">2021-04-21 19:49:58</Setting>
+		<Setting name="Last automatic update version">3.51.0</Setting>
+		<Setting name="Update Check New Version" platform="mac">nightly 2021-04-21 https://filezilla-project.org/nightlies/2021-04-21/x86_64-apple-darwin18.2.0/FileZilla3.app.tar.bz2 14635111 sha512 2106565a6a5479a11c03fca70dec9b482ec4916b4d8fc67063f1318160cfcc5866863d0d9720ac15386215cdddc48452262ea185795101f412b5b106a27722b0 sig:j/lA9ejH2rhfY1Lqf6AUdjgWBO4257bUpGSmBiqp/4MPBGw0gdVsYm5gjYsDs+4COb77CztP0NgbFtDO1YT6AQ
+release 3.52.2 https://dl4.cdn.filezilla-project.org/FileZilla_3.52.2_macosx-x86.app.tar.bz2 14204514 sha512 5f1e3d983a0ff5e53455755b8846a0da15ae42fb7b2e38d862a8d94b2f25442f9c644795c36dc57b2fe5345a793e00d089cea1deb81ca04850bfafeb876a649a sig:oDMJjlLQ21hfxACmW6kdQSUL/PJYwOUJY26mxwTgQz0UAZQAMo/iDta6fnHI/4iP/ZhxesXrEyKFVCE8AjqrBA
+
+3.52.2 (2021-01-18)
+
+- When restoring the main window position at startup, detect if the title bar would become hidden behind taskbars or global menu bars and reposition it appropriately
+- SFTP: Fixed preserving of timestamps on downloads
+
+3.52.0.5 (2021-01-08)
+
+- FTP: Fixed crash if downloading ASCII files with stray carriage returns
+- Fixed too strict requirements for preallocation
+- *nix: Fixed a memory leak
+
+3.52.0.4 (2021-01-07)
+
+- macOS: Work around a kernel bug where ftruncate cannot be called more than once on a shared memory object
+
+3.52.0.3 (2021-01-06)
+
+- macOS: Fix issue opening shared memory objects
+
+3.52.0.2 (2021-01-06)
+
+- HTTP: Handle multi-token Connection: headers
+
+3.52.0.1 (2021-01-05)
+
+- macOS: Rebuilt to address a toolchain issue
+
+3.52.0 (2021-01-04)
+
+- Fixed a regression with the rename file exists action on downloads
+
+3.52.0-rc1 (2020-12-29)
+
++ Added context menu item in the search dialog to close the search and set the selected directory as the current local/remote directory
+- Minor fixes for updating the HTTP transfer status
+
+3.52.0-beta1 (2020-12-17)
+
++ Use asynchronous file readers/writers in the engine
+- MSW: React to system color scheme changes
+- Fixed splitters not being draggable on newly created tabs
+- MSW: Fixed data directory lookup if run from a development environment
+</Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
 				<Tab connected="1" selected="1">

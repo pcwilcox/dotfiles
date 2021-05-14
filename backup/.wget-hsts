@@ -2,6 +2,17 @@
 # Edit at your own risk.
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 piazza.com	0	0	1540774156	86400
+www.duo.uio.no	0	0	1605257977	15768000
+folk.universitetetioslo.no	0	0	1605257947	15768000
+infoscience.epfl.ch	0	0	1605257932	63072000
 raw.githubusercontent.com	0	0	1603834806	31536000
 bootstrap.pypa.io	0	1	1565388802	315360000
+www.usenix.org	0	0	1605257973	300
+codeload.github.com	0	0	1610347398	31536000
+kilthub.cmu.edu	0	1	1605257905	31536000
+apps.dtic.mil	0	1	1605257913	86400
+os.zhdk.cloud.switch.ch	0	1	1605257933	31536000
 www.kali.org	0	0	1531982661	15552000
+arxiv.org	0	0	1605257975	31536000
+github.com	0	1	1610347398	31536000
+sjmulder.nl	0	0	1605257975	31536000

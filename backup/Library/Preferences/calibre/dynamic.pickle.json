@@ -1,10 +1,21 @@
 {
-  "add books dialog dir": "/Users/petewilcox/Nextcloud/Documents/Textbooks",
+  "add books dialog dir": "/Users/petewilcox/Nextcloud/books/RPG Books/dnd 5e/sourcebooks",
+  "choose calibre library": "/Volumes/Share/calibre",
   "choose library location": "/Volumes/NetShare/calibre",
+  "notified-version-updates": {
+    "__class__": "set",
+    "__value__": [
+      "5.13"
+    ]
+  },
   "sort_history": [
     [
-      "timestamp",
-      false
+      "authors",
+      true
+    ],
+    [
+      "title",
+      true
     ],
     [
       "timestamp",

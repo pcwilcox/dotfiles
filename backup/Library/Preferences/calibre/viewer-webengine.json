@@ -1,0 +1,35 @@
+{
+  "main_window_geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAV4AAABygAACfEAAAWfAAAFeAAAAeAAAAnxAAAFnwAAAAAAAAAADXAAAAV4AAAB4AAACfEAAAWf"
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAA/////wAAAIcA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAlQD///8AAAABAAAAAAAAAAD8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAAEegAAA8AAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "session_data": {
+    "controls_help_shown_count": 2,
+    "standalone_font_settings": {},
+    "standalone_misc_settings": {
+      "remember_last_read": true,
+      "remember_window_geometry": false,
+      "save_annotations_in_ebook": true,
+      "singleinstance": false
+    },
+    "standalone_recently_opened": [
+      {
+        "key": "/Volumes/Share/calibre/Unknown/Argol's Comprehensive Guide to Infrastructure (1389)/Argol's Comprehensive Guide to Infrastruct - Unknown.epub",
+        "pathtoebook": "/Volumes/Share/calibre/Unknown/Argol's Comprehensive Guide to Infrastructure (1389)/Argol's Comprehensive Guide to Infrastruct - Unknown.epub",
+        "timestamp": "2021-03-16T17:01:05.796Z",
+        "title": "Argol's Comprehensive Guide to Infrastructure"
+      },
+      {
+        "key": "/Volumes/Share/calibre/Unknown/Ancestry and Culture (1388)/Ancestry and Culture - Unknown.epub",
+        "pathtoebook": "/Volumes/Share/calibre/Unknown/Ancestry and Culture (1388)/Ancestry and Culture - Unknown.epub",
+        "timestamp": "2021-03-16T16:59:44.644Z",
+        "title": "Ancestry and Culture"
+      }
+    ]
+  }
+}

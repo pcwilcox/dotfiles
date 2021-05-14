@@ -1,8 +1,9 @@
+#!/bin/bash
 # ff - see and select bash functions
 ff () {
         echo "ff - see and select bash functions"
-        funct=$(print -l ${(ok)functions}| sed "/^_/d"| fzf --multi) 
-        declare -f $funct
+        funct=$(print -l "${(ok)functions}" | sed "/^_/d"| fzf --multi) 
+        declare -f "$funct"
 }
 
 fshow () {
@@ -16,9 +17,37 @@ FZF-EOF"
 
 #falias - see and select aliases
 falias() {
-  eval $( alias | fzf --multi | sed "s/=.*//")
+  eval "$( alias | fzf --multi | sed "s/=.*//")"
 }
 
-function gcnw(){
+gcnw() 
+{
     git diff -U0 -w --no-color "$1" | git apply --cached --ignore-whitespace --unidiff-zero -
+}
+
+function dash() {
+    open "dash://$*"
+}
+
+
+function path() {
+    echo -e "$PATH" | tr ':' '\n'
+}
+
+function gitset() {
+    if [ "$1" ]; then
+      URL="$1"
+      if [ "$2" ]; then
+        BRANCH="$2"
+        NEWBRANCH="true"
+      else
+        BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+      fi
+      OLDURL="$(git remote -v | head -n 1 | awk '{print $2}')"
+      echo "Changing remote $OLDURL to upstream, adding $URL as origin for branch $BRANCH"
+      git remote rename origin upstream
+      git remote add origin "$URL"
+      [[ "$NEWBRANCH" ]] && git checkout -b "$BRANCH"
+      git push origin "$BRANCH"
+    fi
 }

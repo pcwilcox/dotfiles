@@ -1,5 +1,4 @@
 " .vimrc / init.vim The following vim/neovim configuration works for both Vim and NeoVim
-
 " load vim-plug if it does not exist in the dotfiles
 let s:plugpath = expand('<sfile>:p:h') . "/autoload/plug.vim"
 function! PlugLoad()
@@ -18,11 +17,28 @@ function! PlugLoad()
         endif
     endif
 endfunction
+
+function! WinMove(key) 		
+    let t:curwin = winnr() 		
+    exec "wincmd ".a:key 		
+    if (t:curwin == winnr()) 		
+        if (match(a:key,'[jk]')) 		
+            wincmd v 		
+        else 		
+            wincmd s 		
+        endif 		
+        exec "wincmd ".a:key 		
+    endif 		
+endfunction
+
 " ensure vim-plug is installed and then load it
 call PlugLoad()
 call plug#begin('~/.config/nvim/plugged')
+
+filetype on
 filetype plugin on
 
+Plug 'lervag/vimtex'
 " who the fuck knows if this'll work
 Plug 'sheerun/vim-polyglot'
 " General {{{ Abbreviations
@@ -34,6 +50,7 @@ abbr cosnt const
 abbr attribtue attribute
 abbr attribuet attribute
 
+Plug 'vim-erlang/vim-erlang-runtime'
 set autoread " detect when a file is changed
 au CursorHold,CursorHoldI * checktime
 au FocusGained,BufEnter * :checktime
@@ -182,10 +199,10 @@ nmap <leader>. <c-^>
 " enable . command in visual mode
 vnoremap . :normal .<cr>
 
-map <silent> <C-h> :call functions#WinMove('h')<cr>
-map <silent> <C-j> :call functions#WinMove('j')<cr>
-map <silent> <C-k> :call functions#WinMove('k')<cr>
-map <silent> <C-l> :call functions#WinMove('l')<cr>
+map <silent> <C-h> :call WinMove('h')<cr>
+map <silent> <C-j> :call WinMove('j')<cr>
+map <silent> <C-k> :call WinMove('k')<cr>
+map <silent> <C-l> :call WinMove('l')<cr>
 
 nnoremap <silent> <leader>z :call functions#zoom()<cr>
 
@@ -506,6 +523,7 @@ endfunction
         ""\ 'coc-pairs',
         let g:coc_global_extensions = [
         \ 'coc-css',
+        \ 'coc-metals',
         \ 'coc-json',
         \ 'coc-git',
         \ 'coc-sh',
@@ -519,6 +537,7 @@ endfunction
         \ 'coc-jedi',
         \ 'coc-markdownlint',
         \ 'coc-rls',
+        \ 'coc-vimtex',
         \ 'coc-yaml'
         \ ]
 
@@ -526,7 +545,7 @@ endfunction
 " syntastic
 Plug 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_python_checkers = ['python3']
@@ -605,56 +624,9 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set shiftround
-
-let _curfile =- expand("%:t")
-if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
-    set noexpandtab
-    set tabstop=8
-elseif _curfile =~ "*.html"
-    set shiftwidth=2
-    set softtabstop=2
-    set tabstop=2
-elseif _curfile =~ "*.go"
-    set noexpandtab
-    set tabstop=4
-elseif _curfile =~ "*.yml"
-    set tabstop=2
-    set shiftwidth=2
-    set softtabstop=2
-elseif _curfile =~ "*.c" || "*.h"
-    set tabstop=4
-    set softtabstop=4
-    set shiftwidth=4
-    set shiftround
-    set expandtab
-    set autoindent
-    set cindent
-elseif _curfile =~ ".gitconfig"
-    set noexpandtab
-elseif _curfile =~ "*.tex"
-    set textwidth=80
-    set tabstop=2
-    set shiftwidth=2
-    set softtabstop=2
-    set shiftround
-    set expandtab
-    set autoindent
-endif
 let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 
-au BufWrite *.c :Autoformat
-au BufWrite *.cpp :Autoformat
-au BufWrite *.cc :Autoformat
-au BufWrite *.h :Autoformat
-au BufWrite *.js :Autoformat
-
-let g:syntastic_go_checkers = ['gofmt']
-let g:go_list_type = "quickfix"
-autocmd FileType go nmap <leader>b <Plug>(go-build)
-autocmd FileType go nmap <leader>n :cnext<CR>
-autocmd FileType go nmap <leader>p :cprevious<CR>
-autocmd FileType go nnoremap <leader>a :cclose<CR>
 
 highlight Comment cterm=italic
 
@@ -665,6 +637,10 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+  autocmd BufEnter * match OverLength /\%80v.*/
+augroup END
 let g:tex_flavor = 'latex'
 
 let g:lightline = {
